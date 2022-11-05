@@ -144,4 +144,10 @@ section {
     .my-path .line-break {
         display: none;
     }
+    .about-me {
+        padding-top: 1em;
+    }
+    .my-path {
+        min-width: none;
+    }
 }
