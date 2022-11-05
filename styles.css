@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+:root {
+    --about-me-size: 30%;
+    --line-color: linear-gradient(to right, #D6AC4B, #BAB69D, #D6AC4B); /* <hr> replacement */
+    --paragraph-width: 90%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+    font-size: 1.15em;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    color: #D6AC4B;
+    text-decoration-color: goldenrod;
+}
+
+a:hover {
+    color: rgb(255, 223, 142);
+}
+
+a:active {
+    text-decoration-color: #FFF;
+}
+
+.line-break {
+    height: 2px;
+    background: var(--line-color);
+    margin: 0.7em 0;
+}
+
+/* Left Bar */
+.about-me {
+    width: var(--about-me-size);
+    min-width: 330px;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+}
+
+#profile-picture {
+    border-radius: 50%;
+    margin-bottom: 1em;
+    width: 50%;
+    height: auto;
+}
+
+#name {
+    text-align: center;
+    font-size: 1.9em;
+    font-weight: bold;
+}
+
+.line-break,
+.email,
+.about-me p {
+    width: var(--paragraph-width);
+}
+
+p {
+    margin: 0.5em 0;
+}
+
+.title {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+#github-logo:hover {
+    transform: scale(1.5);
+    filter: invert(57%) sepia(10%) saturate(12%) hue-rotate(324deg) brightness(92%) contrast(93%);
+    transition: transform 0.2s, filter 0.2s;
+}
+
+#linkedin-logo:hover {
+    transform: scale(1.5);
+    filter: invert(45%) sepia(92%) saturate(7172%) hue-rotate(186deg) brightness(96%) contrast(101%);
+    transition: transform 0.2s, filter 0.2s;
+}
+
+#discord-logo:hover {
+    transform: scale(1.5);
+    filter: invert(56%) sepia(16%) saturate(1363%) hue-rotate(189deg) brightness(94%) contrast(92%);
+    transition: transform 0.2s, filter 0.2s;   
+}
+
+.logos {
+    margin: 0.8em 0;
+}
+
+.logos a {
+    margin: 1.2em;
+}
+
+/* Right Bar */
+.my-path {
+    width: calc(100% - var(--about-me-size));
+    min-width: 450px;
+    height: 100vh;
+    background-color: #555;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-path .line-break {
+    width: 30%;
+}
+
+section {
+    max-width: 1220px;
+    text-align: center;
+    margin: 0 1.2em;
+}
+
+@media only screen and (max-width: 800px) {
+    main {
+        flex-direction: column;
+    }
+    .about-me,
+    .my-path {
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 1em;
+    }
+    section {
+        text-align: start;
+        width: var(--paragraph-width);
+    }
+    .my-path .line-break {
+        display: none;
+    }
+}
