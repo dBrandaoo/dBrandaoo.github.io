@@ -127,15 +127,16 @@ section {
     margin: 0 1.2em;
 }
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
     main {
         flex-direction: column;
     }
     .about-me,
     .my-path {
-        width: 100%;
+        width: 100vw;
         height: fit-content;
         padding-bottom: 1em;
+        font-size: 90%;
     }
     section {
         text-align: start;
@@ -148,6 +149,6 @@ section {
         padding-top: 1em;
     }
     .my-path {
-        min-width: none;
+        min-width: 330px;
     }
 }
